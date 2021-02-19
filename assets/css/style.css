@@ -1,0 +1,44 @@
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;
+    color: #272829;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+#hero{
+    position: absolute;
+    z-index: 1;
+    width: max-content;
+    height: max-content;
+}
+
+#hero h1{
+    margin: 0;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #45505b;
+}
+
+@media (min-width: 992px) {
+    #hero {
+      padding-left: 160px;
+    }
+}
+
+canvas{
+    position: absolute;
+    background-color:white;
+}

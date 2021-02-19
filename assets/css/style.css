@@ -22,13 +22,16 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     width: max-content;
     height: max-content;
+    top: 50vh;
+    left: 30vw;
 }
 
 #hero h1{
     margin: 0;
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 62px;
+    font-weight: 900;
     line-height: 56px;
+    font-family: 'Megrim', cursive;
     color: #45505b;
 }
 

@@ -15,9 +15,9 @@ var ball = {
       phase: 0
    },
    ball_color = {
-       r: 0,
-       g: 0,
-       b: 0
+       r: 128,
+       g: 128,
+       b: 128
    },
    R = 2,
    balls = [],
@@ -166,7 +166,7 @@ function renderLines(){
            if(fraction < 1){
                alpha = (1 - fraction).toString();
 
-               ctx.strokeStyle = 'rgba(0,0,0,'+alpha+')';
+               ctx.strokeStyle = 'rgba(80,80,80,'+alpha+')';
                ctx.lineWidth = link_line_width;
                
                ctx.beginPath();
@@ -235,7 +235,7 @@ window.addEventListener('resize', function(e){
 
 function goMovie(){
     initCanvas();
-    initBalls(60);
+    initBalls(50);
     window.requestAnimationFrame(render);
 }
 goMovie();

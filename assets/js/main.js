@@ -13,6 +13,7 @@ window.onscroll = function() {resumeScroll()};
 function resumeScroll() {
     resumeHeight = window.innerHeight*2;
     resumeSection = document.getElementById('resume');
+    // document.body.classList.remove("dark-theme")
 
   if(document.documentElement.scrollTop >= resumeSection.offsetTop-window.innerHeight/2){
       document.body.classList.add("dark-theme")

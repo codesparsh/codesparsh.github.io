@@ -1,23 +1,54 @@
+
+/*--------------------------------------------------------------
+# Common
+--------------------------------------------------------------*/
+
 *{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-html, body{
+body{
+    overflow-x: hidden;
     height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255);
+    /* background-color: var(--backColor1); */
     font-family: "Open Sans", sans-serif;
+    background-color: white;
     color: #272829;
-    overflow: hidden;
+    transition: all 350ms ease-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
 }
 
+section{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
 
+.heading{
+  font-size: 160px;
+  font-weight: 1000;
+  font-family:'Megrim', cursive;
+  color:black;
+}
+
+body.dark-theme {
+  background-color: black;
+  color: whitesmoke;
+}
+
+body.dark-theme .heading{
+  color: whitesmoke;
+}
+
+body.dark-theme #resume .line{
+  border: 6px solid whitesmoke;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -173,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1{
     margin: 0;
-    font-size: 62px;
+    font-size: 72px;
     font-weight: 900;
     line-height: 56px;
     font-family: 'Megrim', cursive;
@@ -189,4 +220,112 @@ h1, h2, h3, h4, h5, h6 {
 canvas{
     position: absolute;
     background-color:white;
+}
+
+
+/*--------------------------------------------------------------
+# About 
+--------------------------------------------------------------*/
+
+.ellipse{
+  position: absolute;
+  width: 582px;
+  height: 582px;
+  border-radius: 50%;
+  left: -85px;
+  top: -148px;
+  z-index: -9;
+
+  background: #EBB9B9;
+}
+
+.picture{
+  position: absolute;
+  width: 640px;
+  height: 640px;
+  left: 117px;
+  top: 143px;
+  background: url(profile.png);
+  background-repeat: no-repeat;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.33));
+
+  border-radius: 22%;
+
+}
+
+#about .heading{
+  /* width: min-content;
+  height: min-content; */
+  margin: auto;
+  text-align: start;
+}
+
+#about .line{
+  position: relative;
+  width: 10vw;
+  height: 0px;
+  /* left: 1051px;
+  top: 223px; */
+
+  border: 6px solid black;
+  transform: rotate(180deg);
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: 10px; */
+  text-align: end;
+}
+
+#about p{
+  font-size: 32px;
+  line-height: 40px;
+  text-justify: newspaper;
+  font-weight: 500;
+  font-family:'Raleway', cursive;
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+
+#resume .heading{
+  margin: auto;
+  /* text-align: end; */
+}
+
+#resume .line{
+  position: relative;
+  width: 10vw;
+  height: 0px;
+  /* left: 1051px;
+  top: 223px; */
+
+  border: 6px solid black;
+  transform: rotate(180deg);
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: 10px; */
+  /* text-align: end; */
+}
+
+/*--------------------------------------------------------------
+# Projects
+--------------------------------------------------------------*/
+#projects .heading{
+  margin: auto;
+  /* text-align: end; */
+}
+
+#projects .line{
+  position: relative;
+  width: 10vw;
+  height: 0px;
+  /* left: 1051px;
+  top: 223px; */
+
+  border: 6px solid black;
+  transform: rotate(180deg);
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: 10px; */
+  text-align: end;
 }

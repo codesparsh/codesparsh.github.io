@@ -8,6 +8,19 @@ new Typed('.typed', {
     backDelay: 2000
 });
 
+window.onscroll = function() {resumeScroll()};
+
+function resumeScroll() {
+    resumeHeight = window.innerHeight*2;
+    resumeSection = document.getElementById('resume');
+
+  if(document.documentElement.scrollTop >= resumeSection.offsetTop-window.innerHeight/2){
+      document.body.classList.add("dark-theme")
+  }
+  else{
+    document.body.classList.remove("dark-theme")
+  }
+}
 
 
 

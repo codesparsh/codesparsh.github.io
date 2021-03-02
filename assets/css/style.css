@@ -9,7 +9,7 @@
 }
 body{
     overflow-x: hidden;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -25,9 +25,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section{
+  position: relative;
   height: 100vh;
   width: 100vw;
-  position: relative;
 }
 
 .heading{
@@ -283,9 +283,29 @@ canvas{
   font-family:'Raleway', cursive;
 }
 
+.social img{
+  margin-top: 1vw;
+  margin-left: 1vw;
+}
+
+.social img {
+  width: 35px;
+}
+
+
+body.dark-theme .social img{
+  /* background-color: white; */
+  filter: invert(90%)
+  /* outline-color: white; */
+  /* color: white; */
+}
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+#resume{
+  position: relative;
+  height: max-content;
+}
 
 #resume .heading{
   margin: auto;
@@ -397,9 +417,17 @@ body.dark-theme #resume .line{
   border: 2px solid #ffffff;
 }
 
+.stars img{
+  width: 20px;
+  filter: invert(90%);
+}
 /*--------------------------------------------------------------
 # Projects
 --------------------------------------------------------------*/
+#projects{
+  height: max-content;
+}
+
 #projects .heading{
   margin: auto;
   /* text-align: end; */
@@ -420,3 +448,155 @@ body.dark-theme #resume .line{
   text-align: end;
 }
 
+
+.fas {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+
+.p-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.p-container .p-card {
+  position: relative;
+  width: 70vw;
+  height: 50vh;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.p-container .p-card ul {
+  z-index: 99;
+  position: absolute;
+  left: 39px;
+  top: 5px;
+  list-style-type: none;
+}
+.p-container .p-card ul li {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  margin: 10px 0;
+  background-color: #E6E5E1;
+}
+.p-container .p-card h2 {
+  z-index: 99;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 20rem;
+  font-size: 60px;
+  font-weight: 700;
+  color: black;
+}
+.p-container .p-card .fa-arrow-right {
+  z-index: 100;
+  position: absolute;
+  right: 75px;
+  bottom: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.p-container .p-card p {
+  z-index: 99;
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  color: #333;
+  opacity: 0.7;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.p-container .p-card .pic {
+  z-index: 100;
+  width: 55vw;
+  height: 50vh;
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+}
+.p-container .p-card .social {
+  position: absolute;
+  left: 60px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 180px;
+  height: 64px;
+  border-radius: 80px;
+}
+.p-container .p-card .social i:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.p-container .p-card .social i:nth-of-type(2) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.p-container .p-card .social i:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.p-container .p-card .social i:nth-of-type(4) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.p-container .p-card:hover i {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.p-container .p-card button {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 60px;
+  height: 60px;
+  background-color: #DA4D1D;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  mix-blend-mode: hard-light;
+}
+.p-container .p-card button i {
+  font-size: 3rem;
+}
+.p-container .p-card:hover button {
+  transform: scale(16.5);
+}
+.p-container .p-card:hover p {
+  color: #fff;
+}
+.p-container .p-card:hover .pic {
+  filter: grayscale(0);
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 100px;
+}

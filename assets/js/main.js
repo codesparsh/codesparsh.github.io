@@ -14,7 +14,6 @@ function resumeScroll() {
     resumeHeight = window.innerHeight*2;
     contactSection = document.getElementById('contact');
     resumeSection = document.getElementById('resume');
-    // document.body.classList.remove("dark-theme")
 
   if(document.documentElement.scrollTop >= resumeSection.offsetTop-window.innerHeight/2 ){
       document.body.classList.add("dark-theme")
@@ -24,13 +23,7 @@ function resumeScroll() {
   }
 }
 
-// (function() {
-//   "use strict";
 
-
-  /**
-   * Easy event listener function
-   */
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
     if (selectEl) {
@@ -42,16 +35,11 @@ function resumeScroll() {
     }
   }
 
-  /**
-   * Easy on scroll event listener 
-   */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
 
-  /**
-   * Navbar links active state on scroll
-   */
+
   let navbarlinks = onSelect('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
@@ -69,9 +57,6 @@ function resumeScroll() {
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
-  /**
-   * Scrolls to an element with header offset
-   */
   const scrollto = (el) => {
     let elementPos = select(el).offsetTop
     window.scrollTo({
@@ -80,18 +65,13 @@ function resumeScroll() {
     })
   }
 
-  /**
-   * Mobile nav toggle
-   */
   on('click', '.mobile-nav-toggle', function(e) {
     onSelect('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
 
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
+
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
@@ -106,10 +86,6 @@ function resumeScroll() {
       scrollto(this.hash)
     }
   }, true)
-
-
-// })
-
 
 
 
